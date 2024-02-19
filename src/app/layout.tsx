@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/modules/Navbar/Navbar";
+import Fonts from "@/components/Fonts";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 export const metadata: Metadata = {
   title: "Ensemble | CSE RIT Dept Fest",
@@ -14,7 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <Fonts />
+      </head>
+      <body>
+        <SmoothScrolling>
+          <Navbar />
+          {children}
+        </SmoothScrolling>
+      </body>
     </html>
   );
 }
