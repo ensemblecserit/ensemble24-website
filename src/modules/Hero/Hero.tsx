@@ -16,6 +16,7 @@ const Hero = () => {
         alt="CSE Department RIT"
         src="/dept.png"
         draggable={false}
+        priority
       />
     </section>
   );
