@@ -52,3 +52,12 @@ body {
 ::-webkit-scrollbar-button {
   display: none;
 }
+
+.provide_padding {
+  padding: 0 20px;
+}
+
+.section {
+  min-height: 100dvh;
+  margin: auto;
+}
