@@ -12,9 +12,9 @@ const Fonts = () => {
         rel="stylesheet"
       ></link>
       <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"
-      ></link>
+      />
     </>
   );
 };

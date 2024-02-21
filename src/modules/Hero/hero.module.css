@@ -2,6 +2,9 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  --outline: #ffffff70;
+  --size: 0.85px;
+  --neg-size: -0.85px;
 }
 .dept {
   position: absolute;
@@ -43,17 +46,24 @@
   position: absolute;
   content: "MBLE";
 }
+
 .ense::after,
 .mble::after {
   left: 7px;
   bottom: 7px;
   z-index: 0;
   color: rgb(20, 20, 20);
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white;
+  text-shadow: var(--neg-size) var(--neg-size) 0 var(--outline),
+    var(--size) var(--neg-size) 0 var(--outline),
+    var(--neg-size) var(--size) 0 var(--outline),
+    var(--size) var(--size) 0 var(--outline);
 }
 
 @media (max-width: 1024px) {
+  .section {
+    --size: 0.25px;
+    --neg-size: -0.25px;
+  }
   .hero_text {
     left: 10px;
     top: 170px;
@@ -66,11 +76,12 @@
 @media (max-width: 720px) {
   .dept {
     width: 130vw;
+    bottom: 60px;
     height: auto;
   }
   .hero_text {
-    left: 10px;
-    top: 70px;
-    font-size: 75px;
+    left: 5px;
+    top: 23vh;
+    font-size: 21vw;
   }
 }

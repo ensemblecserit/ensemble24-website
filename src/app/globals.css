@@ -7,6 +7,7 @@
 :root {
   --clr-primary: #20b98f;
   --clr-primary-faded: #65e0bf;
+  --transition-medium: all 0.3s cubic-bezier(0.09, 0.58, 0.84, 1.01);
 }
 
 @media (max-width: 768px) {
@@ -37,6 +38,10 @@ body {
   font-weight: 400;
 }
 
+img {
+  user-select: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -61,11 +66,50 @@ body {
   display: none;
 }
 
+/* Text Selection */
+*::selection {
+  background: var(--clr-primary);
+  color: white;
+}
+*::-moz-selection {
+  background: var(--clr-primary);
+  color: white;
+}
+
 .provide_padding {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .section {
-  min-height: 100dvh;
   margin: auto;
+  height: fit-content;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .provide_padding {
+    padding: 0 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .provide_padding {
+    padding: 0 120px;
+  }
+}
+.bg-red {
+  background-color: red;
+  /* testing purpose */
+}
+
+.jsx {
+  font-weight: 200;
+  font-size: 28px;
+  color: #ffffff40;
+  user-select: none;
+  cursor: pointer;
+  transition: var(--transition-medium);
+}
+.jsx:hover {
+  color: var(--clr-primary);
 }
