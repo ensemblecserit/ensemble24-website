@@ -28,6 +28,7 @@
   color: var(--clr-primary);
   user-select: none;
   /* for gasp */
+  padding: 2px 0;
   overflow: hidden;
 }
 .year {

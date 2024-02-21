@@ -6,7 +6,7 @@ import cn from "@/lib/cn";
 const About = () => {
   return (
     <Section id="about" className={styles.about} tag="About">
-      <Text heading="ABOUT CSE DEPT.">
+      <Text heading="ABOUT CSE DEPT." className="shift">
         Nestled within the serene campus of RIT, our department boasts a vibrant
         community of talented students and alumni, supported by experienced and
         friendly faculty, making it one of the best departments in the college.
@@ -14,7 +14,7 @@ const About = () => {
         always strived to address global challenges and develop smarter
         technology solutions.
       </Text>
-      <Text heading="ABOUT ENSEMBLE '24">
+      <Text heading="ABOUT ENSEMBLE '24" className="shift">
         Ensemble is more than just a department fest. Through a diverse range of
         events, workshops, and performances, Ensemble '24 celebrates the
         creativity, passion, and dedication of our department members. Come,

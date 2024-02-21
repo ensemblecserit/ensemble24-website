@@ -8,6 +8,10 @@
   --clr-primary: #20b98f;
   --clr-primary-faded: #65e0bf;
   --transition-medium: all 0.3s cubic-bezier(0.09, 0.58, 0.84, 1.01);
+  --gap: 40px;
+  --gapd: 50px;
+  --shift: 0 8px;
+  --shiftd: 0 50px;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +44,10 @@ body {
 
 img {
   user-select: none;
+}
+input,
+textarea {
+  all: unset;
 }
 
 ::-webkit-scrollbar {
@@ -84,9 +92,19 @@ img {
   margin: auto;
   height: fit-content;
   padding-bottom: 100px;
+  gap: var(--gap);
+}
+.shift {
+  padding: var(--shift);
 }
 
 @media (min-width: 768px) {
+  .section {
+    gap: var(--gapd);
+  }
+  .shift {
+    padding: var(--shiftd);
+  }
   .provide_padding {
     padding: 0 75px;
   }
@@ -121,4 +139,10 @@ img {
 .dept_animate {
   opacity: 1;
   /* transform: translateX(20%); */
+}
+.text-blue {
+  color: #0277e3;
+}
+.text-white {
+  color: white;
 }

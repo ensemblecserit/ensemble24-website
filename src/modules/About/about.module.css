@@ -3,12 +3,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
-.text_container {
-  padding: 0 8px;
-}
 .text_container h2 {
   font-size: 28px;
   font-weight: 200;
@@ -19,12 +15,4 @@
   color: #ffffff90;
   font-size: 17px;
   line-height: 150%;
-}
-@media (min-width: 768px) {
-  .about {
-    gap: 50px;
-  }
-  .text_container {
-    padding: 0 50px;
-  }
 }
