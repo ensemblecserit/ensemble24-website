@@ -6,6 +6,14 @@
 
 :root {
   --clr-primary: #20b98f;
+  --clr-primary-faded: #65e0bf;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth !important;
+    overscroll-behavior: contain;
+  }
 }
 
 html,

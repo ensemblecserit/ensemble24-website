@@ -32,7 +32,7 @@
   user-select: none;
 }
 .inner:hover {
-  color: white;
+  color: var(--clr-primary-faded);
 }
 
 @media (min-width: 768px) {

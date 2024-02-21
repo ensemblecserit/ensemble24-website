@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   z-index: 20;
-  mask: linear-gradient(to top, transparent, black 30%);
+  mask: linear-gradient(to top, transparent, black 20%);
 }
 .hero_text {
   position: absolute;
@@ -51,4 +51,26 @@
   color: rgb(20, 20, 20);
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white;
+}
+
+@media (max-width: 1024px) {
+  .hero_text {
+    left: 10px;
+    top: 170px;
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 720px) {
+  .dept {
+    width: 130vw;
+    height: auto;
+  }
+  .hero_text {
+    left: 10px;
+    top: 70px;
+    font-size: 75px;
+  }
 }

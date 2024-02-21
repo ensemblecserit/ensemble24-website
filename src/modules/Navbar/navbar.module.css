@@ -10,7 +10,7 @@
     to right,
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0.1) 50%,
-    rgba(150, 255, 226, 0.14) 70% /* Adjust opacity to 20% for #96FFE2 */
+    rgba(150, 255, 226, 0.14) 70%
   );
   box-shadow: inset 0px 2px 13px -3px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
@@ -22,4 +22,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+.nav a {
+  height: 24px;
+}
+@media (max-width: 768px) {
+  .nav {
+    top: auto;
+    bottom: 20px;
+  }
 }
