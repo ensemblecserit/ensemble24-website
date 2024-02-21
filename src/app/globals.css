@@ -113,3 +113,12 @@ img {
 .jsx:hover {
   color: var(--clr-primary);
 }
+
+/* for gasp */
+.text_animate {
+  opacity: 0;
+}
+.dept_animate {
+  opacity: 1;
+  /* transform: translateX(20%); */
+}

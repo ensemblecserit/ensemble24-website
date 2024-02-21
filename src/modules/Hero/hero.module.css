@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
   --outline: #ffffff70;
   --size: 0.85px;
   --neg-size: -0.85px;
@@ -26,6 +27,8 @@
   line-height: 120%;
   color: var(--clr-primary);
   user-select: none;
+  /* for gasp */
+  overflow: hidden;
 }
 .year {
   font-size: 45px;
@@ -60,10 +63,6 @@
 }
 
 @media (max-width: 1024px) {
-  .section {
-    --size: 0.25px;
-    --neg-size: -0.25px;
-  }
   .hero_text {
     left: 10px;
     top: 170px;

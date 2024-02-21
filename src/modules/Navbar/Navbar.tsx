@@ -1,32 +1,56 @@
+"use client";
+
 import Link from "next/link";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import styles from "./navbar.module.css";
 import { HomeIcon, Mail, TicketPlus, Users } from "lucide-react";
 import Image from "next/image";
+import cn from "@/lib/cn";
 
 const Navbar = () => {
+  const container = useRef<HTMLDivElement>(null);
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".nav_animate",
+        { width: 30, opacity: 0 },
+        {
+          width: 350,
+          opacity: 1,
+          ease: "elastic.out(0.5,0.4)",
+          duration: 1,
+        }
+      );
+    },
+    { scope: container }
+  );
   return (
-    <nav className={styles.nav} draggable={false}>
-      <Link href="/">
-        <HomeIcon />
-      </Link>
-      <Link href="#about">
-        <Users />
-      </Link>
-      <Image
-        className={styles.logo}
-        height={31}
-        width={27}
-        src="/ensemble-white.webp"
-        alt="Ensemble '24 logo"
-        draggable={false}
-      />
-      <Link href="#events">
-        <TicketPlus />
-      </Link>
-      <Link href="#contact">
-        <Mail />
-      </Link>
-    </nav>
+    <div ref={container}>
+      <nav className={cn(styles.nav, "nav_animate")} draggable={false}>
+        <Link href="/">
+          <HomeIcon />
+        </Link>
+        <Link href="#about">
+          <Users />
+        </Link>
+        <Image
+          className={styles.logo}
+          height={31}
+          width={27}
+          src="/ensemble-white.webp"
+          alt="Ensemble '24 logo"
+          draggable={false}
+        />
+        <Link href="#events">
+          <TicketPlus />
+        </Link>
+        <Link href="#contact">
+          <Mail />
+        </Link>
+      </nav>
+    </div>
   );
 };
 
