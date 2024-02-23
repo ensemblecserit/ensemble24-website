@@ -33,7 +33,7 @@ a {
 }
 
 body {
-  background-color: black;
+  background: black;
   background-image: url("/noise18.webp");
   color: white;
 

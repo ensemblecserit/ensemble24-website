@@ -10,22 +10,17 @@
 }
 .contact input,
 .contact textarea {
-  padding: 1px 0;
   width: 100%;
-  max-width: 500px;
-  min-height: 100%;
-  border-bottom: 1px solid transparent;
+  max-width: 360px;
   transition: var(--transition-medium);
   line-height: 150%;
+  border-bottom: 1px solid #ffffff50;
+  padding-bottom: 2px;
 }
 .contact textarea {
   min-width: 360px;
   height: 150px;
   text-wrap: wrap;
-}
-.contact input:hover,
-.contact textarea:hover {
-  border-bottom: 1px solid #ffffff50;
 }
 .message {
   display: flex;
@@ -34,13 +29,19 @@
 .form_row {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 @media (min-width: 768px) {
+  .contact input,
+  .contact textarea {
+    max-width: 500px;
+  }
   .contact textarea {
     min-width: 500px;
   }
   .form_row {
     flex-direction: row;
+    gap: 5px;
   }
 }

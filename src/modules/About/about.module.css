@@ -2,7 +2,8 @@
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  padding: 30px 0;
 }
 
 .text_container h2 {
@@ -15,4 +16,17 @@
   color: #ffffff90;
   font-size: 17px;
   line-height: 150%;
+}
+.logos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+@media (min-width: 768px) {
+  .logos {
+    flex-direction: row;
+  }
 }

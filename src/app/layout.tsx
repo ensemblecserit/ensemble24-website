@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/modules/Navbar/Navbar";
 import Fonts from "@/components/Fonts";
 import SmoothScrolling from "@/components/SmoothScrolling";
 
@@ -21,10 +20,7 @@ export default function RootLayout({
         <Fonts />
       </head>
       <body>
-        <SmoothScrolling>
-          <Navbar />
-          {children}
-        </SmoothScrolling>
+        <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
   );

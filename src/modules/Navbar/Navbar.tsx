@@ -35,14 +35,16 @@ const Navbar = () => {
         <Link href="#about">
           <Users />
         </Link>
-        <Image
-          className={styles.logo}
-          height={31}
-          width={27}
-          src="/ensemble-white.webp"
-          alt="Ensemble '24 logo"
-          draggable={false}
-        />
+        <Link href="/glimpses">
+          <Image
+            className={styles.logo}
+            height={27}
+            width={24}
+            src="/ensemble-white.webp"
+            alt="Ensemble '24 logo"
+            draggable={false}
+          />
+        </Link>
         <Link href="#events">
           <TicketPlus />
         </Link>
