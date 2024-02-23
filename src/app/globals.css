@@ -33,8 +33,9 @@ a {
 }
 
 body {
-  background: black;
-  background-image: url("/noise18.webp");
+  /* background: black; */
+  background: linear-gradient(to right, black, #162623, black);
+  /* background-image: url("/noise18.webp"); */
   color: white;
 
   /* font */
@@ -145,4 +146,15 @@ textarea {
 }
 .text-white {
   color: white;
+}
+
+.noise {
+  position: fixed;
+  height: 1800dvh;
+  width: 100dvw;
+  top: 0;
+  left: 0;
+  background-image: url("/noise18.webp");
+  opacity: 30%;
+  z-index: -1;
 }

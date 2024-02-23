@@ -20,6 +20,7 @@ export default function RootLayout({
         <Fonts />
       </head>
       <body>
+        <div className="noise"></div>
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>

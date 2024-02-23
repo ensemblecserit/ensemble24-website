@@ -12,7 +12,7 @@
   right: 0;
   bottom: 0;
   z-index: 20;
-  mask: linear-gradient(to top, transparent, black 20%);
+  mask: linear-gradient(to top, transparent, black 10%);
 }
 .hero_text {
   position: absolute;
