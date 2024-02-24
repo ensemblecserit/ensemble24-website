@@ -5,6 +5,7 @@ import ProvidePadding from "@/components/ProvidePadding";
 import About from "@/modules/About/About";
 import Events from "@/modules/Events/Events";
 import Contact from "@/modules/Contact/Contact";
+import GalleryLink from "@/modules/Gallery/GalleryLink/Link";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ProvidePadding>
         <About />
         <Events />
+        <GalleryLink />
         <Contact />
       </ProvidePadding>
     </>

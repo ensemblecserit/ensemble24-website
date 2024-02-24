@@ -12,6 +12,13 @@
   --gapd: 50px;
   --shift: 0 8px;
   --shiftd: 0 50px;
+  --bg-start: #0b0d0d;
+  --bg-end: #162623;
+  --clr-1: #1a2c29;
+  --clr-2: #21322f;
+  --clr-3: #293b38;
+  --clr-4: #3b4f4c;
+  --clr-5: #8bcabf;
 }
 
 @media (max-width: 768px) {
@@ -34,7 +41,12 @@ a {
 
 body {
   /* background: black; */
-  background: linear-gradient(to right, black, #162623, black);
+  background: linear-gradient(
+    to right,
+    var(--bg-start),
+    var(--bg-end),
+    var(--bg-start)
+  );
   /* background-image: url("/noise18.webp"); */
   color: white;
 

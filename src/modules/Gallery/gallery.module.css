@@ -1,0 +1,147 @@
+.main {
+  font-family: "Montserrat", "sans-serif";
+  margin: 60px 0;
+  width: 100%;
+  height: 600px;
+  background: var(--clr-1);
+  border-radius: 10px;
+  border: 0.5px solid #ffffff22;
+  font-size: 2.15rem;
+  transition: var(--transition-medium);
+  overflow: hidden;
+}
+.main:hover {
+  box-shadow: rgba(36, 255, 204, 0.1) 2px 2px 12px 2px;
+}
+.main a {
+  user-select: none;
+}
+.first_row,
+.second_cols,
+.second_row_container {
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  color: var(--clr-5);
+}
+.second_row_container {
+  height: 300px;
+  flex-direction: column;
+}
+.third_row,
+.p1 {
+  background: var(--clr-1);
+  font-weight: 200;
+}
+.p2,
+.p3 {
+  background: var(--clr-2);
+  font-weight: 700;
+}
+.p4 {
+  background: var(--clr-3);
+  font-weight: 400;
+}
+.p5 {
+  background: var(--clr-4);
+  font-weight: 300;
+}
+.p1 {
+  flex: 3;
+}
+.p2 {
+  flex: 2;
+}
+.second_row {
+  flex: 2;
+}
+.third_row,
+.p3,
+.p4 {
+  flex: 1;
+}
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.third_row {
+  transition: var(--transition-medium);
+  cursor: pointer;
+  opacity: 0.75;
+  padding: 15px 10px;
+  text-wrap: wrap;
+  line-height: 80%;
+  border-radius: 10px;
+}
+.third_row {
+  height: 300px;
+  font-size: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 5px;
+}
+.third_row div:nth-child(1) {
+  line-height: 70%;
+  font-size: 8rem;
+  font-weight: 100;
+}
+.p1:hover,
+.p2:hover,
+.p3:hover,
+.p4:hover,
+.p5:hover,
+.third_row:hover {
+  opacity: 1;
+  color: white;
+}
+.small_text {
+  font-size: 15px;
+  line-height: 120%;
+  margin-top: 15px;
+  font-weight: 300;
+  color: white;
+}
+@media (min-width: 768px) {
+  .main {
+    font-weight: 200;
+    font-size: 4.5rem;
+    padding: 0;
+    height: 450px;
+  }
+  .second_row_container {
+    flex-direction: row;
+    height: 150px;
+  }
+  .second_row {
+    flex: 4;
+  }
+  .third_row div:nth-child(1) {
+    font-size: 16rem;
+  }
+  .small_text {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 150%;
+  }
+  .p3,
+  .p4 {
+    line-height: 65%;
+  }
+  .third_row {
+    flex-direction: column;
+  }
+  .third_row div:nth-child(1) {
+    line-height: 70%;
+    font-size: 12rem;
+  }
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5,
+  .third_row {
+    opacity: 0.5;
+  }
+}

@@ -18,16 +18,16 @@ const About = () => {
         </Text>
         <Image
           src="/25yrs.png"
-          height={272}
-          width={300}
+          height={163}
+          width={180}
           alt="25th year anniversary. CSE RIT."
         />
       </div>
       <div className={styles.logos}>
         <Image
-          src="/ensemble-blue.webp"
-          height={272}
-          width={235}
+          src="/ensemble-white.webp"
+          height={172}
+          width={180}
           alt="Ensemble '24 Logo"
         />
         <Text heading="ABOUT ENSEMBLE '24" className="shift">
