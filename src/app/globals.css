@@ -99,6 +99,8 @@ textarea {
 
 .provide_padding {
   padding: 0 10px;
+  overflow: hidden;
+  /* extra scrollbar coming in glimpses page */
 }
 
 .section {
@@ -169,4 +171,82 @@ textarea {
   background-image: url("/noise18.webp");
   opacity: 30%;
   z-index: -1;
+}
+
+/* gallery modal */
+.img_modal {
+  --bg-modal: var(--clr-3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 6em 0;
+  background: var(--bg-modal);
+  padding-bottom: 5em;
+  padding-top: 3em;
+  pointer-events: none;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.img_modal .img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 340px;
+  height: 500px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.img_modal .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 5px;
+}
+.modal_item {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  height: max-content;
+  --p-height: 24px;
+  --p-font: 20px;
+}
+.modal_item p {
+  position: relative;
+  font-size: var(--p-font);
+  top: var(--p-height);
+}
+.modal_item_revealer {
+  position: absolute;
+  top: var(--p-height);
+  width: 100%;
+  height: 100%;
+}
+.modal_item_revealer::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-modal);
+}
+.close_btn {
+  cursor: pointer;
+  color: white;
+  transition: var(--transition-medium);
+}
+.close_btn:hover {
+  color: var(--clr-primary-faded);
+}
+@media screen and (min-width: 768px) {
+  .img_modal {
+    padding-bottom: 3em;
+  }
+  .img_modal .img {
+    width: 800px;
+    height: 500px;
+  }
 }

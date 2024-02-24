@@ -1,7 +1,6 @@
 import Section from "@/components/Section";
 import styles from "../gallery.module.css";
 import cn from "@/lib/cn";
-import Link from "next/link";
 import ClickableLink from "./ClickableLink";
 
 const GalleryLink = () => {

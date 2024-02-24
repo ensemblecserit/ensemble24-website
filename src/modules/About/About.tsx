@@ -1,7 +1,6 @@
 import Section from "@/components/Section";
 import Text from "./Text";
 import styles from "./about.module.css";
-import cn from "@/lib/cn";
 import Image from "next/image";
 
 const About = () => {
@@ -12,9 +11,10 @@ const About = () => {
           Nestled within the serene campus of RIT, our department boasts a
           vibrant community of talented students and alumni, supported by
           experienced and friendly faculty, making it one of the best
-          departments in the college. Collaborating actively with leading
-          industries and academia, we have always strived to address global
-          challenges and develop smarter technology solutions.
+          departments in the college. Partnering closely with key industries and
+          academia, we continuously strive to create more intelligent technology
+          solutions. We're also thrilled to celebrate our department's 25th
+          anniversary, marking a quarter-century of excellence.
         </Text>
         <Image
           src="/25yrs.png"
