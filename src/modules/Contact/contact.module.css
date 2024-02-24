@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 50px 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .contact label {
   color: var(--clr-primary);
@@ -39,9 +43,5 @@
   }
   .contact textarea {
     min-width: 500px;
-  }
-  .form_row {
-    flex-direction: row;
-    gap: 5px;
   }
 }
