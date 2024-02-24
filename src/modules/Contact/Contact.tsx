@@ -91,7 +91,7 @@ const Contact = () => {
           </div>
         </div>
         <div className={cn("shift", styles.form_row)}>
-          <button type="submit">
+          <button type="submit" disabled={loading}>
             {!loading ? "SEND MESSAGE" : "SENDING.."}
           </button>
         </div>
