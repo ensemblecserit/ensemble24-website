@@ -40,8 +40,4 @@
   .contact textarea {
     min-width: 500px;
   }
-  .form_row {
-    flex-direction: row;
-    gap: 5px;
-  }
 }
