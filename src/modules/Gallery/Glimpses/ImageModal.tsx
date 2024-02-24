@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useGallery } from "../GalleryContext";
+import dynamic from "next/dynamic";
 
 const ImageModal = () => {
   const { clicked } = useGallery();
@@ -31,7 +32,7 @@ const ImageModal = () => {
         amount: 0.2,
       },
     },
-    "<",
+    "<"
   ).reverse();
 
   useGSAP(() => {
@@ -54,4 +55,4 @@ const ImageModal = () => {
   );
 };
 
-export default ImageModal;
+export default dynamic(() => Promise.resolve(ImageModal), { ssr: false });
