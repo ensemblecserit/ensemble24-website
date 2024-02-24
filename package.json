@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@gsap/react": "^2.1.0",
     "@studio-freight/react-lenis": "^0.0.44",
     "gsap": "^3.12.5",

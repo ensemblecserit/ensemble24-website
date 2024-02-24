@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@emailjs/browser':
+    specifier: ^4.1.0
+    version: 4.1.0
   '@gsap/react':
     specifier: ^2.1.0
     version: 2.1.0
@@ -42,6 +45,11 @@ devDependencies:
     version: 5.3.3
 
 packages:
+
+  /@emailjs/browser@4.1.0:
+    resolution: {integrity: sha512-AWLTmFli2NIKjBXs4Fql1B5z8i3W2r+CKCaxp0DdcFzcIQxrCS2TzmqJtIiPZKh9FpZgqueQTivBx6QOxaz89Q==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /@gsap/react@2.1.0:
     resolution: {integrity: sha512-pwdFXvOM5IsRZXpWTKkQoEjb3/iUjDCU1BCJDlE6pHgVjG+7Ep/7+sszUgqVZ2Jc0mR8gnhtDWyx5cQAT4kwQw==}
