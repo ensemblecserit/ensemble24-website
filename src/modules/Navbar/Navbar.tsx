@@ -21,10 +21,10 @@ const Navbar = () => {
           opacity: 1,
           ease: "elastic.out(0.5,0.4)",
           duration: 1,
-        }
+        },
       );
     },
-    { scope: container }
+    { scope: container },
   );
   return (
     <div ref={container}>

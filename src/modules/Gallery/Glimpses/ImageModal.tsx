@@ -31,7 +31,7 @@ const ImageModal = () => {
         amount: 0.2,
       },
     },
-    "<"
+    "<",
   ).reverse();
 
   useGSAP(() => {
