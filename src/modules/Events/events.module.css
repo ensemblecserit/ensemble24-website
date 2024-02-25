@@ -1,0 +1,121 @@
+.tag {
+  background: #ffffff44;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+}
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.post {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid #ffffff33;
+}
+.post img {
+  height: 350px;
+  width: 350px;
+}
+.options {
+  position: absolute;
+  z-index: 2;
+  bottom: 12px;
+  left: 0;
+  height: 50px;
+  width: 92.5%;
+  background: #ffffff44;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  transition: var(--transition-medium);
+  padding: 0 10px;
+}
+.save,
+.register {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-medium);
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.register {
+  flex-direction: row-reverse;
+}
+.save svg,
+.register svg {
+  min-width: 24px;
+  transition: var(--transition-medium);
+}
+.text {
+  overflow: hidden;
+  font-weight: 600;
+  transition: var(--transition-medium);
+}
+.save:hover,
+.register:hover {
+  background: #ffffff33;
+  border-radius: 15px;
+}
+.options > div:hover > span {
+  width: 100%;
+  transition: var(--transition-medium);
+}
+@media (min-width: 768px) {
+  .post {
+    margin-bottom: 50px;
+  }
+  .text {
+    width: 0px;
+  }
+  .options > div:hover > span {
+    width: 100%;
+  }
+}
+.finished {
+  margin: 80px 0;
+  font-family: "Montserrat", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+.finished h1 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.finished p {
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: 400;
+  color: #ffffff77;
+}
+.finished svg {
+  width: 60px;
+  height: 60px;
+}
+.bold {
+  font-weight: 600;
+  color: #ffffffbb;
+}

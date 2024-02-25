@@ -15,7 +15,7 @@ const Contact = () => {
   });
 
   const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.currentTarget;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -29,7 +29,7 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formData,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
       setLoading(false);
     } catch (error) {
@@ -84,6 +84,7 @@ const Contact = () => {
             <textarea
               value={formData.message}
               onChange={handleInputChange}
+              id="message"
               name="message"
               required
               wrap="hard"

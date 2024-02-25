@@ -29,13 +29,13 @@ const Navbar = () => {
   return (
     <div ref={container}>
       <nav className={cn(styles.nav, "nav_animate")} draggable={false}>
-        <Link href="/">
+        <Link href="/" aria-label="Home">
           <HomeIcon />
         </Link>
-        <Link href="#about">
+        <Link href="#about" aria-label="About">
           <Users />
         </Link>
-        <Link href="/glimpses">
+        <Link href="/glimpses" aria-label="Glimpses">
           <Image
             className={styles.logo}
             height={27}
@@ -46,10 +46,10 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <Link href="#events">
+        <Link href="/events" aria-label="Events">
           <TicketPlus />
         </Link>
-        <Link href="#contact">
+        <Link href="#contact" aria-label="Contact">
           <Mail />
         </Link>
       </nav>
