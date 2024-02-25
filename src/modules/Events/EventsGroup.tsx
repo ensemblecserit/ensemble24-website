@@ -1,24 +1,21 @@
+import { EventsGroupType } from "@/data/eventTypes";
 import Finished from "./EventsPage/Finished";
 import Post from "./EventsPage/Post";
 import styles from "./events.module.css";
 
 type Props = {
-  folder: string;
-  section: string;
   end?: boolean;
-};
+} & EventsGroupType;
 
 const EventsGroup = (props: Props) => {
   return (
     <>
       <div className={styles.tag}>#{props.section}</div>
       <div className={styles.group}>
-        <Post url={`/events/${props.folder}/2.jpeg`} />
-        <Post url={`/events/${props.folder}/3.jpeg`} hideRegister />
-        <Post url={`/events/${props.folder}/4.jpeg`} hideRegister />
-        <Post url={`/events/${props.folder}/1.jpeg`} hideRegister />
-        <Post url={`/events/${props.folder}/3.jpeg`} />
-        <Post url={`/events/${props.folder}/1.jpeg`} />
+        {props.events.length > 0 &&
+          props.events.map((e) => {
+            return <Post key={e.id} {...e} />;
+          })}
       </div>
       {!props.end && <Finished section={props.section} />}
     </>
