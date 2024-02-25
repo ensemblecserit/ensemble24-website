@@ -21,6 +21,7 @@ const About = () => {
           height={163}
           width={180}
           alt="25th year anniversary. CSE RIT."
+          draggable={false}
         />
       </div>
       <div className={styles.logos}>
@@ -29,6 +30,7 @@ const About = () => {
           height={172}
           width={180}
           alt="Ensemble '24 Logo"
+          draggable={false}
         />
         <Text heading="ABOUT ENSEMBLE '24" className="shift">
           Ensemble is more than just a department fest. Through a diverse range

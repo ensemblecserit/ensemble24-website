@@ -137,10 +137,9 @@ textarea {
 
 .jsx {
   font-weight: 200;
-  font-size: 28px;
+  font-size: 24px;
   color: #ffffff40;
   user-select: none;
-  cursor: pointer;
   transition: var(--transition-medium);
 }
 .jsx:hover {
@@ -254,5 +253,8 @@ textarea {
   .img_modal .img img {
     height: 100%;
     width: auto;
+  }
+  .modal_item {
+    bottom: 2.5vw;
   }
 }

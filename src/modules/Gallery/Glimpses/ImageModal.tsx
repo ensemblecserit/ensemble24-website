@@ -28,9 +28,9 @@ const ImageModal = () => {
     {
       top: 0,
       ease: "power4.inOut",
-      duration: 1.35,
+      duration: 0.75,
       stagger: {
-        amount: 0.2,
+        amount: 3,
       },
     },
     "<"
