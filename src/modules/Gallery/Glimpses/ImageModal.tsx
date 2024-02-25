@@ -5,9 +5,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useGallery } from "../GalleryContext";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const ImageModal = () => {
-  const { clicked } = useGallery();
+  const { clicked, changeState } = useGallery();
   const containerRef = useRef(null);
   const { contextSafe } = useGSAP({ scope: containerRef });
   const t1 = gsap.timeline({ paused: true });
@@ -36,7 +37,10 @@ const ImageModal = () => {
   ).reverse();
 
   useGSAP(() => {
-    if (typeof clicked === "string") t1.reversed(!t1.reversed());
+    if (!clicked) return;
+    if (typeof clicked === "string") {
+      t1.reversed(!t1.reversed());
+    }
   }, [clicked]);
 
   const handleClose = contextSafe(() => {
@@ -49,7 +53,7 @@ const ImageModal = () => {
         <div className="modal_item_revealer"></div>
       </div>
       <div className="img">
-        <img src={clicked || "4.JPG"} alt="" />
+        <img src={clicked || "/logo-launch/19.webp"} alt="" />
       </div>
     </div>
   );

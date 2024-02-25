@@ -1,6 +1,6 @@
 import { Photo } from "@/data/galleryTypes";
 import styles from "../gallery.module.css";
-import Image from "./Image";
+import ImageElement from "./ImageElement";
 
 type Props = {
   folder: string;
@@ -16,12 +16,7 @@ const GallerySection = (props: Props) => {
           props.photos.length > 0 &&
           props.photos.map((photo: Photo) => {
             return (
-              <Image
-                key={photo.name}
-                name={photo.name}
-                folder={props.folder}
-                caption={photo.caption}
-              />
+              <ImageElement key={photo.name} folder={props.folder} {...photo} />
             );
           })}
       </div>

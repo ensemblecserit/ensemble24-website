@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from "react";
 
 type GalleryContextProps = {
   clicked: string | null;
-  changeState: (n: string) => void;
+  changeState: (n: string | null) => void;
 };
 const defaultGalleryProps = {
   clicked: null,
@@ -16,7 +16,7 @@ const GalleryContext = createContext<GalleryContextProps>(defaultGalleryProps);
 
 export const GalleryProvider = (props: ChildrenProps) => {
   const [clicked, setClicked] = useState<string | null>(null);
-  const changeState = (n: string) => {
+  const changeState = (n: string | null) => {
     setClicked(n);
   };
   return (

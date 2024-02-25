@@ -196,14 +196,14 @@
 }
 .item {
   width: calc(12.5% - 20px);
-  height: 190px;
+  height: 175px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   overflow: hidden;
   padding: 10px 5px;
   cursor: pointer;
 }
 .item_img {
-  width: calc(100% - 5px);
+  width: 100%;
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -212,11 +212,9 @@
   justify-content: space-between;
 }
 .item_img img {
-  height: auto;
-  max-height: 140px;
-  width: inherit;
+  height: 120px;
+  width: 120px;
   object-fit: cover;
-  border-radius: 2px;
 }
 .item_name {
   font-size: 13px;
