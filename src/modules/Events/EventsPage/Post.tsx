@@ -1,19 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../events.module.css";
 import { Bookmark, BookmarkCheck, PencilLine } from "lucide-react";
 import { PostType } from "@/data/eventTypes";
-import Link from "next/link";
+import {
+  addPostToLocalStorage,
+  removePostFromLocalStorage,
+} from "@/lib/postSave";
+import { getSavedArrayFromLocalStorage } from "@/lib/postSave";
 
 type Props = PostType;
+
 const Post = (props: Props) => {
-  const [saved, setSaved] = useState(false);
-  const toggleSave = () =>
-    setSaved((s) => {
-      return !s;
-    });
+  const [saved, setSaved] = useState<boolean | null>(null);
+  const toggleSave = () => {
+    // adding the post to saved or deleting it accordingly in ls
+    if (saved) removePostFromLocalStorage(props.id);
+    else addPostToLocalStorage({ ...props });
+
+    // toggling the saved state
+    setSaved(!saved);
+  };
+
+  useEffect(() => {
+    const saved = getSavedArrayFromLocalStorage();
+    setSaved(saved.includes(props.id));
+  }, []);
 
   const url = `/events/${props.folder}/${props.img}`;
   return (
@@ -22,8 +37,12 @@ const Post = (props: Props) => {
       {!props.hideRegister && (
         <div className={styles.options}>
           <div className={styles.save} onClick={toggleSave}>
-            {saved ? <BookmarkCheck /> : <Bookmark />}
-            <span className={styles.text}>SAVE{saved ? "D" : ""}</span>
+            {saved !== null && (
+              <>
+                {saved ? <BookmarkCheck /> : <Bookmark />}
+                <span className={styles.text}>SAVE{saved ? "D" : ""}</span>
+              </>
+            )}
           </div>
           <Link
             href={props.link}

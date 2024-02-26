@@ -14,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 }
 .post {
@@ -28,6 +28,8 @@
   border: 1px solid #ffffff33;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .post img {
   height: 350px;
@@ -90,6 +92,7 @@
 @media (min-width: 768px) {
   .post {
     margin-bottom: 50px;
+    margin-left: 0;
   }
   .text {
     width: 0px;
