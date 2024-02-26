@@ -240,7 +240,7 @@ textarea {
   transition: var(--transition-medium);
 }
 .close_btn:hover {
-  color: var(--clr-primary-faded);
+  color: rgb(255, 127, 127);
 }
 @media screen and (min-width: 768px) {
   .img_modal {
