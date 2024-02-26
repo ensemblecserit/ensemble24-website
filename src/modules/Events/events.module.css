@@ -89,19 +89,6 @@
   width: 100%;
   transition: var(--transition-medium);
 }
-@media (min-width: 768px) {
-  .post {
-    margin-bottom: 50px;
-    margin-left: 0;
-  }
-  .text {
-    width: 0px;
-  }
-  .options > .register:hover > span,
-  .options > .save:hover > span {
-    width: 100%;
-  }
-}
 .finished {
   margin: 80px 0;
   font-family: "Montserrat", "sans-serif";
@@ -128,4 +115,27 @@
 .bold {
   font-weight: 600;
   color: #ffffffbb;
+}
+.events_section {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 10px;
+  padding-bottom: 0px;
+  gap: 120px;
+}
+@media (min-width: 768px) {
+  .post {
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+  .text {
+    width: 0px;
+  }
+  .options > .register:hover > span,
+  .options > .save:hover > span {
+    width: 100%;
+  }
+  .events_section {
+    padding: 60px;
+  }
 }
