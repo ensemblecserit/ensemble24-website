@@ -37,7 +37,7 @@ const Popups = () => {
   const [current, setCurrent] = useState<number>(-2); // Stores the current song index (-2 for initial state)
 
   // Function to handle loading and starting a new song
-  const setSong = () => {
+  const setSong = async () => {
     audio?.pause(); // Pause the current audio if any
     if (isPlaying) setIsPlaying(false); // Update playing state
 
@@ -50,7 +50,7 @@ const Popups = () => {
     if (current !== -2) {
       // If not initial state, Set playing state & start audio
       setIsPlaying(true);
-      aud.play();
+      await aud.play();
     }
 
     setCurrent(temp + 1); // Update the current song index
@@ -66,17 +66,24 @@ const Popups = () => {
   // Effect for handling audio play/pause based on isPlaying state
   // just using the state to apply pause and play functions
   useEffect(() => {
-    if (audio) {
-      if (isPlaying) audio?.play();
-      else audio.pause();
-    }
+    const stopStart = async () => {
+      if (audio) {
+        if (isPlaying) await audio?.play();
+        else audio.pause();
+      }
+    };
+
+    stopStart();
   }, [isPlaying]);
 
   // Function to toggle play/pause
   const toggle = () => audio && setIsPlaying(!isPlaying);
 
-  // Function to handle moving to the next song
-  const handleNext = () => setSong();
+  // Function to handle moving to the next song if is not playing play first.
+  const handleNext = () => {
+    if (!isPlaying) toggle();
+    else setSong();
+  };
 
   let size = 25;
   return (
@@ -103,7 +110,7 @@ const Popups = () => {
         <button className="btn" onClick={toggle} style={{ display: "none" }}>
           <Lightbulb size={size} />
         </button>
-        {!isOpen && (
+        {!first && !isOpen && (
           <>
             <button className="btn" onClick={toggle}>
               {isPlaying ? <PauseOctagon size={size} /> : <Music size={size} />}
