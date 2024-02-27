@@ -376,3 +376,40 @@ body {
     padding: 5px 25px;
   }
 }
+
+.popup-cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-element {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-60px) rotate(90deg);
+  scale: 0;
+  background-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0.2) 0%,
+		rgba(255, 255, 255, 0.1) 50%,
+		rgba(150, 255, 226, 0.14) 70%
+	);
+  width: 100px;
+	box-shadow: inset 0px 2px 13px -3px rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(20px);
+	border-radius: 10px;
+	border: 1px solid #ffffff40;
+	padding: 4px 20px;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  top: 85px;
+  transition: 0.2s;
+}
+
+.hint-active .popup-element {
+  opacity: 1;
+  scale: 1;
+  transform: translateY(0px) rotate(90deg);
+}
