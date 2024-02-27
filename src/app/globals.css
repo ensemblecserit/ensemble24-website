@@ -318,11 +318,13 @@ body {
 .btn {
 	all: unset;
 	opacity: 0.8;
-	transition: var(--transition-medium);
 	cursor: pointer;
 	margin: 5px 6px;
 }
-.btn:hover {
+.btn svg {
+	transition: var(--transition-medium);
+}
+.btn svg:hover {
 	opacity: 1;
 	scale: 1.2;
 }
@@ -408,7 +410,13 @@ body {
 	transition: 0.2s;
 }
 
-.hint-active .popup-element , .popup-cont:hover .popup-element {
+.popup-dir-invert .popup-element {
+	transform: translateY(60px) rotate(90deg);
+	top: -85px;
+}
+
+.hint-active .popup-element,
+.popup-cont:hover .popup-element {
 	opacity: 1;
 	scale: 1;
 	transform: translateY(0px) rotate(90deg);
@@ -421,5 +429,10 @@ body {
 	.popup-element {
 		top: -85px;
 		transform: translateY(60px) rotate(90deg);
+	}
+
+	.popup-dir-invert .popup-element {
+		transform: translateY(0px) rotate(90deg);
+		top: 85px;
 	}
 }
