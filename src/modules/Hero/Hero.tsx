@@ -6,7 +6,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import cn from "@/lib/cn";
-import BgMusic from "@/components/BgMusic";
 
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);

@@ -65,8 +65,8 @@ const PreEvents = [
 //
 export const AllEvents = [
   new EventsGroupType(pe, PreEvents),
-  new EventsGroupType(wk, PreEvents),
-  new EventsGroupType(cs, PreEvents),
-  new EventsGroupType(ex, PreEvents),
-  new EventsGroupType(st, PreEvents),
+  // new EventsGroupType(wk, PreEvents),
+  // new EventsGroupType(cs, PreEvents),
+  // new EventsGroupType(ex, PreEvents),
+  // new EventsGroupType(st, PreEvents),
 ];
