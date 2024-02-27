@@ -6,6 +6,8 @@
   margin-left: auto;
   margin-right: auto;
   font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .register {
   all: unset;
@@ -121,7 +123,7 @@
   flex-direction: column;
   padding: 60px 10px;
   padding-bottom: 0px;
-  gap: 120px;
+  gap: 50px;
 }
 @media (min-width: 768px) {
   .post {
@@ -137,5 +139,76 @@
   }
   .events_section {
     padding: 60px;
+    gap: 120px;
   }
+}
+.card {
+  height: 160px;
+  flex: 1;
+  margin: 2px;
+  border-radius: 60px;
+  padding: 25px;
+  font-weight: 100;
+  font-size: 1.15rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-medium);
+  cursor: pointer;
+  border: 1px solid #ffffff11;
+  opacity: 0.9;
+}
+.card p {
+  width: 70%;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  line-height: 100%;
+  hyphens: auto;
+}
+.c1 {
+  background: linear-gradient(to top right, var(--clr-2), var(--clr-1));
+}
+.c2 {
+  background: linear-gradient(to top right, var(--clr-2), var(--clr-4));
+}
+.c3 {
+  background: linear-gradient(to top right, var(--clr-2), var(--clr-1));
+}
+.c4 {
+  background: linear-gradient(to top right, var(--clr-2), var(--clr-3));
+}
+@media (min-width: 768px) {
+  .card {
+    height: 200px;
+    margin: 10px;
+    padding: 35px 30px;
+    font-size: 2rem;
+  }
+}
+.arrow {
+  width: fit-content;
+  height: auto;
+  margin-left: auto;
+}
+.filler {
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  height: 350%;
+  width: 400px;
+  background: #ffffff15;
+  filter: blur(20px);
+  transform: rotateZ(-20deg);
+  transition: all 0.3s ease-in;
+}
+.card:hover {
+  opacity: 1;
+  border: 1px solid #ffffff44;
+}
+.card:hover .filler {
+  left: 100%;
+  opacity: 0.2;
 }

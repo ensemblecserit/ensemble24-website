@@ -1,9 +1,13 @@
 import { EventsGroupType, PostType } from "./eventTypes";
 
-// folder names
+// folder & id & link name
 const pe = "pre-events";
+const wk = "workshops";
+const cs = "competitions";
+const ex = "exhibitions";
+const st = "stalls";
 
-// name, caption, isLandscape
+// (id: number, folder: string, img: string, link: string, hideRegister: boolean)
 const PreEvents = [
   new PostType(
     101,
@@ -59,4 +63,10 @@ const PreEvents = [
 //
 // GALLERY ARRAY
 //
-export const AllEvents = [new EventsGroupType("pre-events", PreEvents)];
+export const AllEvents = [
+  new EventsGroupType(pe, PreEvents),
+  new EventsGroupType(wk, PreEvents),
+  new EventsGroupType(cs, PreEvents),
+  new EventsGroupType(ex, PreEvents),
+  new EventsGroupType(st, PreEvents),
+];
