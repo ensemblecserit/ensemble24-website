@@ -5,7 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from "./navbar.module.css";
-import { HomeIcon, Mail, TicketPlus, Users } from "lucide-react";
+import { Hand, HomeIcon, Lightbulb, Mail, TicketPlus, Users } from "lucide-react";
 import Image from "next/image";
 import cn from "@/lib/cn";
 
@@ -26,35 +26,45 @@ const Navbar = () => {
     },
     { scope: container }
   );
+  
   return (
-    <div ref={container}>
-      <nav className={cn(styles.nav, "nav_animate")} draggable={false}>
-        <Link href="/" aria-label="Home">
-          <HomeIcon />
-        </Link>
-        <Link href="#about" aria-label="About">
-          <Users />
-        </Link>
-        <Link href="/glimpses" aria-label="Glimpses">
-          <Image
-            className={styles.logo}
-            height={27}
-            width={24}
-            src="/ensemble-white.webp"
-            alt="Ensemble '24 logo"
-            draggable={false}
-            priority
-          />
-        </Link>
-        <Link href="/events" aria-label="Events">
-          <TicketPlus />
-        </Link>
-        <Link href="#contact" aria-label="Contact">
-          <Mail />
-        </Link>
-      </nav>
-    </div>
-  );
+		<div ref={container}>
+			<nav className={cn(styles.nav, "nav_animate")} draggable={false}>
+				<Link href="/" aria-label="Home">
+					<HomeIcon />
+				</Link>
+				<Link href="#about" aria-label="About">
+					<Users />
+				</Link>
+				<Link href="/glimpses" aria-label="Glimpses">
+					<Image
+						className={styles.logo}
+						height={27}
+						width={24}
+						src="/ensemble-white.webp"
+						alt="Ensemble '24 logo"
+						draggable={false}
+						priority
+					/>
+				</Link>
+				<Link href="/events" aria-label="Events">
+					<TicketPlus />
+				</Link>
+				<Link href="#contact" aria-label="Contact">
+					<Mail />
+				</Link>
+			</nav>
+
+			<div className={styles.hints}>
+				<span>
+					<Hand />
+				</span>
+				<button aria-label="Hint" >
+					<Lightbulb />
+				</button>
+			</div>
+		</div>
+	);
 };
 
 export default Navbar;
