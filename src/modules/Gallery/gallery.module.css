@@ -168,8 +168,11 @@
   padding-left: 2px;
 }
 .home {
+  position: fixed;
   height: 60px;
   width: 60px;
+  right: 150px;
+  z-index: 100;
   background: linear-gradient(to top right, var(--clr-1), var(--clr-4));
   border-radius: 15px;
   display: flex;
@@ -222,6 +225,10 @@
   text-transform: uppercase;
 }
 @media (max-width: 900px) {
+  .home {
+    right: 15px;
+    box-shadow: 0 0 30px 10px var(--clr-primary-opacity);
+  }
   .item {
     width: calc(50% - 5px);
   }

@@ -7,6 +7,7 @@
 :root {
   --clr-primary: #20b98f;
   --clr-primary-faded: #65e0bf;
+  --clr-primary-opacity: #65e0bf39;
   --transition-medium: all 0.3s cubic-bezier(0.09, 0.58, 0.84, 1.01);
   --gap: 40px;
   --gapd: 50px;
