@@ -9,5 +9,6 @@ export class Sponsor {
 
 export const decathlon = new Sponsor("decathlon.webp", "sports partner");
 export const alRazi = new Sponsor("alrazi.webp", "food partner");
-export const rigLabs = new Sponsor("riglabs.webp", "education partner");
+export const ritaan = new Sponsor("ritaan.webp", "supporting partner");
 export const wolfram = new Sponsor("wolfram.webp", "technical partner");
+export const rigLabs = new Sponsor("riglabs.webp", "education partner");

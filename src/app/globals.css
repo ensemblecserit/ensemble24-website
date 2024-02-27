@@ -423,9 +423,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-color: red;
-  }
   .popup-element {
     top: -85px;
     transform: translateY(60px) rotate(90deg);

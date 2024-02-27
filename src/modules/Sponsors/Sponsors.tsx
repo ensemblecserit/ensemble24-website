@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import styles from "./sponsors.module.css";
 import Item from "./Item";
-import { alRazi, decathlon, rigLabs, wolfram } from "@/data/sponsors";
+import { alRazi, decathlon, rigLabs, ritaan, wolfram } from "@/data/sponsors";
 
 const Sponsors = () => {
   // use the sponsor_container as rows
@@ -14,8 +14,9 @@ const Sponsors = () => {
       <div className={styles.sponsor_container}>
         <Item {...decathlon} />
         <Item {...alRazi} />
-        <Item {...rigLabs} />
+        <Item {...ritaan} />
         <Item {...wolfram} />
+        <Item {...rigLabs} />
       </div>
     </Section>
   );
