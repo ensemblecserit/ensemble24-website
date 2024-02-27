@@ -6,6 +6,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import cn from "@/lib/cn";
+import BgMusic from "@/components/BgMusic";
 
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -22,11 +23,11 @@ const Hero = () => {
           duration: 1.5,
           stagger: 0.2,
         },
-        "<",
+        "<"
       );
       // tl.to(".dept_animate", { x: 0, opacity: 1, duration: 0.4, delay: -1.5 });
     },
-    { scope: container },
+    { scope: container }
   );
   return (
     <section className={styles.section} ref={container}>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Fonts from "@/components/Fonts";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import Popups from "@/components/Popups";
 
 export const metadata: Metadata = {
   title: "Ensemble | CSE RIT Dept Fest",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Fonts />
       </head>
       <body>
+        <Popups />
         <div className="noise"></div>
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>
