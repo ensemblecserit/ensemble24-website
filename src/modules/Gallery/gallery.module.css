@@ -225,6 +225,10 @@
   text-transform: uppercase;
 }
 @media (max-width: 900px) {
+  .g_header {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
   .home {
     right: 15px;
     box-shadow: 0 0 30px 10px var(--clr-primary-opacity);
