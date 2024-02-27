@@ -3,7 +3,7 @@
 import cn from "@/lib/cn";
 import { Lightbulb, Music, PauseOctagon, StepForward } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const Popups = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +30,21 @@ const Popups = () => {
     setIsOpen(false);
   };
 
+  /**Adds a className to body tag on hint onClick and removes it after a set time */
+  const handleHints: () => void = useCallback(() => {
+    const hintCls = "hint-active";
+    let hasHint = document.body.classList.contains(hintCls);
+    let timeout;
+    if (!hasHint) {
+      document.body.classList.toggle(hintCls);
+      timeout = setTimeout(() => {
+        document.body.classList.toggle(hintCls);
+      }, 3000);
+    } else {
+      clearTimeout(timeout);
+    }
+  }, []);
+
   // setting songs
   // State variables for managing audio playback
   const [audio, setAudio] = useState<HTMLAudioElement>(); // Holds the current audio element
@@ -43,7 +58,8 @@ const Popups = () => {
 
     // Determining the next song index
     let temp;
-    if (current === -2) temp = -1; // If initial state, set to -1 for first song
+    if (current === -2)
+      temp = -1; // If initial state, set to -1 for first song
     else temp = current === songs.length - 1 ? -1 : current; // If last song, loop back to -1
 
     let aud = new Audio(songs[temp + 1]); // Create a new Audio object for the next song
@@ -106,16 +122,39 @@ const Popups = () => {
         </div>
       </div>
 
-      <div className="panel">
-        <button className="btn" onClick={toggle} style={{ display: "none" }}>
+      <div className="panel" style={{ display: "flex" }}>
+        <button
+          className="btn popup-cont popup-dir-invert"
+          onClick={handleHints}
+        >
+          <span className="popup-element">About</span>
           <Lightbulb size={size} />
         </button>
+
         {!first && !isOpen && (
           <>
-            <button className="btn" onClick={toggle}>
-              {isPlaying ? <PauseOctagon size={size} /> : <Music size={size} />}
+            <button
+              className="btn popup-cont popup-dir-invert"
+              onClick={toggle}
+            >
+              {isPlaying ? (
+                <>
+                  <span className="popup-element">Pause</span>
+
+                  <PauseOctagon size={size} />
+                </>
+              ) : (
+                <>
+                  <span className="popup-element">Play</span>
+                  <Music size={size} />
+                </>
+              )}
             </button>
-            <button className="btn" onClick={handleNext}>
+            <button
+              className="btn popup-cont popup-dir-invert"
+              onClick={handleNext}
+            >
+              <span className="popup-element">Forward</span>
               <StepForward size={size} />
             </button>
           </>

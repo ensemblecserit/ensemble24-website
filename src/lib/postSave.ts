@@ -1,5 +1,4 @@
 import { PostType } from "@/data/eventTypes";
-import { useMemo } from "react";
 
 const key = "saved";
 const keyArray = "saved_array";

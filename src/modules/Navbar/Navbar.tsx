@@ -5,9 +5,17 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from "./navbar.module.css";
-import { HomeIcon, Mail, TicketPlus, Users } from "lucide-react";
+import {
+  Hand,
+  HomeIcon,
+  Lightbulb,
+  Mail,
+  TicketPlus,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
 import cn from "@/lib/cn";
+import About from "@/modules/About/About";
 
 const Navbar = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -26,16 +34,20 @@ const Navbar = () => {
     },
     { scope: container }
   );
+
   return (
     <div ref={container}>
       <nav className={cn(styles.nav, "nav_animate")} draggable={false}>
-        <Link href="/" aria-label="Home">
+        <Link href="/" aria-label="Home" className="popup-cont">
+          <span className="popup-element">Home</span>
           <HomeIcon />
         </Link>
-        <Link href="#about" aria-label="About">
+        <Link href="#about" aria-label="About" className="popup-cont">
+          <span className="popup-element">About</span>
           <Users />
         </Link>
-        <Link href="/glimpses" aria-label="Glimpses">
+        <Link href="/glimpses" aria-label="Glimpses" className="popup-cont">
+          <span className="popup-element">Glimpses</span>
           <Image
             className={styles.logo}
             height={27}
@@ -46,10 +58,12 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <Link href="/events" aria-label="Events">
+        <Link href="/events" aria-label="Events" className="popup-cont">
+          <span className="popup-element">Events</span>
           <TicketPlus />
         </Link>
-        <Link href="#contact" aria-label="Contact">
+        <Link href="#contact" aria-label="Contact" className="popup-cont">
+          <span className="popup-element">Contact</span>
           <Mail />
         </Link>
       </nav>
