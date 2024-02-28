@@ -422,6 +422,10 @@ body {
   transform: translateY(0px) rotate(-90deg);
 }
 
+.green{
+  color: var(--clr-primary);
+}
+
 @media (max-width: 768px) {
   .popup-element {
     top: -85px;

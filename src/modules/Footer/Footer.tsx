@@ -27,7 +27,10 @@ const Footer = async () => {
     <footer className={cn(styles.footer, "provide_padding")}>
       <div className={styles.info}>
         <div className={styles.visitor}>
-          <p>Btw, you are the {addSuffix(visitor)} visitor of this site.</p>
+          <p>
+            Btw, you are the <span className="green">{addSuffix(visitor)}</span>{" "}
+            visitor of this site.
+          </p>
           <Link href={whatsappUrl} target="_blank">
             Give us a share! <Share2 size={16} />
           </Link>
