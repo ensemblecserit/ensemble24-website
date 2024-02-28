@@ -3,16 +3,10 @@ import { NextResponse } from "next/server";
 
 // Config to match the routes that the middleware should be run for
 export const config = {
+  // Only run the middleware for the root path
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
     {
-      source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
+      source: "/",
       // Ignore prefetch requests
       missing: [
         { type: "header", key: "next-router-prefetch" },
