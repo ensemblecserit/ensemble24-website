@@ -33,12 +33,38 @@
   user-select: none;
   /* for gasp */
   padding: 7px 7px 0 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .year {
+  position: relative;
   font-size: 45px;
   line-height: 100%;
   padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.events {
+  z-index: 105;
+  background: #ffffff22;
+  backdrop-filter: blur(20px);
+  color: white;
+  border-radius: 15px;
+  width: 130px;
+  height: 40px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-medium);
+  cursor: pointer;
+}
+.events:hover {
+  background: white;
+  color: black;
 }
 .ense,
 .mble {
@@ -81,12 +107,20 @@
     font-weight: 900;
     line-height: 120%;
   }
+  .events {
+    margin: 0;
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+  }
 }
 
 @media (max-width: 720px) {
   .hero_text {
     left: 5px;
-    top: 120px;
+    top: 90px;
     font-size: 21vw;
   }
 }

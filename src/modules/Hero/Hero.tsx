@@ -6,6 +6,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import cn from "@/lib/cn";
+import Link from "next/link";
 
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -33,7 +34,10 @@ const Hero = () => {
       <div className={cn(styles.hero_text, "hero_animate")} draggable={false}>
         <h1 className={cn(styles.ense, "text_animate")}>ENSE</h1>
         <h1 className={cn(styles.mble, "text_animate")}>MBLE</h1>
-        <span className={cn(styles.year, "text_animate")}>'24</span>
+        <span className={cn(styles.year, "text_animate")}>'24 </span>
+        <Link href="/events" className={cn(styles.events, "text_animate")}>
+          View Events
+        </Link>
       </div>
       <Image
         className={cn(styles.dept, "dept_animate")}
