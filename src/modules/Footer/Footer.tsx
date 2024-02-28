@@ -3,9 +3,20 @@ import styles from "./footer.module.css";
 import addSuffix from "@/lib/addSuffix";
 import Link from "next/link";
 import { Share2 } from "lucide-react";
+import { kv } from "@vercel/kv";
+import { unstable_noStore as noStore } from "next/cache";
 
-const Footer = () => {
-  let visiter = 211;
+const Footer = async () => {
+  // Disable data caching for visitor count
+  noStore();
+  let visitor;
+  try {
+    visitor = await kv.get<number>("visitor-count");
+  } catch (error) {
+    console.log(error);
+    // Fallback
+    visitor = 212;
+  }
   const url = "https://ensemblecse.tech";
   const text =
     "Check out this website and join for the department fest @ CSE Dept, RIT, Kottayam!";
@@ -16,7 +27,7 @@ const Footer = () => {
     <footer className={cn(styles.footer, "provide_padding")}>
       <div className={styles.info}>
         <div className={styles.visitor}>
-          <p>Btw, you are the {addSuffix(visiter)} visiter of this site.</p>
+          <p>Btw, you are the {addSuffix(visitor)} visitor of this site.</p>
           <Link href={whatsappUrl} target="_blank">
             Give us a share! <Share2 size={16} />
           </Link>
