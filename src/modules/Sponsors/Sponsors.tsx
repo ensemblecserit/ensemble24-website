@@ -12,11 +12,11 @@ const Sponsors = () => {
         <h1>Partners</h1>
       </div>
       <div className={styles.sponsor_container}>
+        <Item {...ritaan} />
+        <Item {...rigLabs} />
         <Item {...decathlon} />
         <Item {...alRazi} />
-        <Item {...ritaan} />
         <Item {...wolfram} />
-        <Item {...rigLabs} />
       </div>
     </Section>
   );

@@ -52,6 +52,7 @@ const Popups = () => {
     // Function to handle loading and starting a new song
     const setSong = async () => {
       let aud = new Audio(songs[0]);
+      aud.loop = true;
       setAudio(aud); // Set the new audio element in state
     };
 

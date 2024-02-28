@@ -139,7 +139,7 @@ textarea {
 .jsx {
   font-weight: 200;
   font-size: 24px;
-  color: #ffffff40;
+  color: #ffffff30;
   user-select: none;
   transition: var(--transition-medium);
 }
