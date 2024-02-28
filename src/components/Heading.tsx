@@ -10,13 +10,13 @@ type Props = {
 const Heading = (props: Props) => {
   return (
     <section className={styles.g_header}>
+      <Link className={styles.home} href="/" aria-label="Go Back">
+        <Home />
+      </Link>
       <div className={styles.g_heading}>
         <div className={styles.g_caption}>{props.headingLine1}</div>
         <div className={styles.g_ensemble}>{props.headingLine2}</div>
       </div>
-      <Link className={styles.home} href="/" aria-label="Go Back">
-        <Home />
-      </Link>
     </section>
   );
 };
