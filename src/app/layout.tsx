@@ -3,6 +3,7 @@ import "./globals.css";
 import Fonts from "@/components/Fonts";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import Popups from "@/components/Popups";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Ensemble | CSE RIT Dept Fest",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Popups />
         <div className="noise"></div>
         <SmoothScrolling>{children}</SmoothScrolling>
+        <SpeedInsights />
       </body>
     </html>
   );
