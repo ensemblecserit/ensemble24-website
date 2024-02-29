@@ -59,10 +59,26 @@ const PreEvents = [
     false
   ),
   new PostType(
-    107,
+    108,
     pe,
     "linkedin.jpeg",
     "https://www.instagram.com/p/C30Gnwly6Nj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    false
+  ),
+
+  new PostType(
+    109,
+    pe,
+    "survivalFittest.jpeg",
+    "https://www.instagram.com/p/C35XG3_SleG/?igsh=MWd0NHB3YjNuNml4dQ==",
+    false
+  ),
+
+  new PostType(
+    110,
+    pe,
+    "uiux.jpeg",
+    "https://www.instagram.com/p/C35YAzRSom_/?igsh=MTU0YzVqdnE5cTkwcw==",
     false
   ),
 ];
