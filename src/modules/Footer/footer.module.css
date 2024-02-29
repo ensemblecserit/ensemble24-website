@@ -84,6 +84,17 @@
   color: white;
 }
 
+.credits {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 0.1px;
+  transition: 0.1s color;
+}
+
+.credits:hover {
+  color: var(--clr-primary)
+}
+
 @media (max-width: 768px) {
   .footer {
     height: auto;
@@ -108,5 +119,8 @@
     gap: 40px;
     font-size: 1.5rem;
     padding-bottom: 20px;
+  }
+  .copyright {
+    text-align: center;
   }
 }
