@@ -1,5 +1,5 @@
 import { kv } from "@vercel/kv";
-import { NextResponse } from "next/server";
+import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 
 // Config to match the routes that the middleware should be run for
 export const config = {
@@ -16,13 +16,19 @@ export const config = {
   ],
 };
 
-export default async function middleware() {
-  const response = NextResponse.next();
-  try {
-    await kv.incr("visitor-count");
-  } catch (error) {
-    console.log("Error incrementing visitor count:", error);
-  } finally {
-    return response;
-  }
+export default async function middleware(
+  _req: NextRequest,
+  event: NextFetchEvent
+) {
+  // Run the increment in the background
+  event.waitUntil(
+    (async () => {
+      try {
+        await kv.incr("visitor-count");
+      } catch (error) {
+        console.log("Error incrementing visitor count:", error);
+      }
+    })()
+  );
+  return NextResponse.next();
 }
