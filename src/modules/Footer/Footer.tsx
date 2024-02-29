@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Share2 } from "lucide-react";
 import { kv } from "@vercel/kv";
 import { unstable_noStore as noStore } from "next/cache";
+import { Suspense } from "react";
 
-const Footer = async () => {
+const VisitorCount = async () => {
   // Disable data caching for visitor count
   noStore();
   let visitor;
@@ -17,6 +18,11 @@ const Footer = async () => {
     // Fallback
     visitor = 212;
   }
+
+  return <>{addSuffix(visitor)}</>;
+};
+
+const Footer = () => {
   const url = "https://ensemblecse.tech";
   const text =
     "Check out this website and join for the department fest @ CSE Dept, RIT, Kottayam!";
@@ -28,7 +34,13 @@ const Footer = async () => {
       <div className={styles.info}>
         <div className={styles.visitor}>
           <p>
-            Btw, you are the <span className="green">{addSuffix(visitor)}</span>{" "}
+            Btw, you are the
+            <span className="green">
+              <Suspense fallback=" XYZth ">
+                {" "}
+                <VisitorCount />{" "}
+              </Suspense>
+            </span>
             visitor of this site.
           </p>
           <Link href={whatsappUrl} target="_blank">
