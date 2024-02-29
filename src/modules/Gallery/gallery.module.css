@@ -169,12 +169,9 @@
   padding-left: 2px;
 }
 .home {
-  /* position: fixed; */
-  /* position: relative; */
+  position: relative;
   height: 60px;
   width: 60px;
-  right: 150px;
-  z-index: 100;
   background: linear-gradient(to top right, var(--clr-1), var(--clr-4));
   border-radius: 15px;
   display: flex;
