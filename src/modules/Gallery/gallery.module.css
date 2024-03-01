@@ -235,7 +235,7 @@
     padding-bottom: 50px;
   }
   .home {
-    right: 15px;
+    margin-left: 15px;
     box-shadow: 0 0 30px 10px var(--clr-primary-opacity);
   }
   .item {
