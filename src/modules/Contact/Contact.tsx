@@ -78,9 +78,9 @@ const Contact = () => {
         <div className={cn("shift", styles.form_row)}>
           <label htmlFor="message">
             ensemble@cserit: <span className="text-blue">Enter message</span>
+            <span className="text-white">$</span>
           </label>
           <div className={styles.message}>
-            <span className="text-white">$</span>
             <textarea
               value={formData.message}
               onChange={handleInputChange}
