@@ -92,7 +92,7 @@
 }
 
 .credits:hover {
-  color: var(--clr-primary)
+  color: var(--clr-primary);
 }
 
 @media (max-width: 768px) {

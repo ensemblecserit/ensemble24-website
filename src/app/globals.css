@@ -423,7 +423,7 @@ body {
   transform: translateY(0px) rotate(-90deg);
 }
 
-.green{
+.green {
   color: var(--clr-primary);
 }
 

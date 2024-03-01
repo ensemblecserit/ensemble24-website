@@ -59,7 +59,10 @@ const Footer = () => {
           <div>Copyright © 2024</div>
           <div>ENSEMBLE'24 CSE RIT</div>
           <div>All rights reserved</div>
-          <Link href="https://www.youtube.com/watch?v=OGwyhjk_fhE&list=OLAK5uy_mulgeKNv0iTsW0ovIFzga1L36Ya3tBH9E&index=1" className={styles.credits}>
+          <Link
+            href="https://www.youtube.com/watch?v=OGwyhjk_fhE&list=OLAK5uy_mulgeKNv0iTsW0ovIFzga1L36Ya3tBH9E&index=1"
+            className={styles.credits}
+          >
             Music credits
           </Link>
         </div>

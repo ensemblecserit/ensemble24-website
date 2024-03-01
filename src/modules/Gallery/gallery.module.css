@@ -178,7 +178,7 @@
 }
 
 .home::after {
-  content: '';
+  content: "";
   border: 1px solid var(--clr-4);
   height: 100%;
   transform: translateX(35px);
