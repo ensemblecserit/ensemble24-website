@@ -218,6 +218,7 @@ textarea {
 }
 .modal_item p {
   position: relative;
+  user-select: none;
   font-size: var(--p-font);
   top: var(--p-height);
 }

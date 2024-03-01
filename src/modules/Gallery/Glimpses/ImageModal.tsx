@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useGallery } from "../GalleryContext";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 
 const ImageModal = () => {
   const { clicked, changeState } = useGallery();
