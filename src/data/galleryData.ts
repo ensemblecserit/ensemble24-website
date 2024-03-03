@@ -93,8 +93,8 @@ const pf = "previous-fest";
 // GALLERY ARRAY
 //
 export const Galleries = [
+  new Gallery(r, "Rebound Competition", Rebound),
   new Gallery(ll, "Logo Launch", LogoLaunch),
   new Gallery(pe, "Pre-Events", PreEvents),
   new Gallery(pf, "Previous Fest Gallery", PrevFest),
-  new Gallery(r, "Rebound Competition", Rebound),
 ];
