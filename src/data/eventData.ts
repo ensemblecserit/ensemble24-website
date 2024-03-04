@@ -83,12 +83,22 @@ const PreEvents = [
   ),
 ];
 
+
+const Workshops = [
+  new PostType(
+    110,
+    wk,
+    "bharatdrive.jpg",
+    "https://bit.ly/bharat_drive",
+    false
+  ),
+];
 //
 // GALLERY ARRAY
 //
 export const AllEvents = [
+  new EventsGroupType(wk, Workshops),
   new EventsGroupType(pe, PreEvents),
-  // new EventsGroupType(wk, PreEvents),
   // new EventsGroupType(cs, PreEvents),
   // new EventsGroupType(ex, PreEvents),
   // new EventsGroupType(st, PreEvents),
