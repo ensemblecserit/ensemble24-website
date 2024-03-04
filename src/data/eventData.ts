@@ -93,13 +93,24 @@ const Workshops = [
     false
   ),
 ];
+
+const Exhibitions = [
+  new PostType(
+    110,
+    ex,
+    "roboexpo.jpg",
+    "https://www.instagram.com/p/C4GPNrIyrRH/?igsh=MWVvdzQwMHlnNGd3Zg==",
+    false
+  ),
+];
+
 //
 // GALLERY ARRAY
 //
 export const AllEvents = [
   new EventsGroupType(wk, Workshops),
+  new EventsGroupType(ex, Exhibitions),
   new EventsGroupType(pe, PreEvents),
   // new EventsGroupType(cs, PreEvents),
-  // new EventsGroupType(ex, PreEvents),
   // new EventsGroupType(st, PreEvents),
 ];
