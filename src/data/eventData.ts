@@ -96,7 +96,14 @@ const Workshops = [
 
 const Exhibitions = [
   new PostType(
-    110,
+    200,
+    ex,
+    "vrgame.jpg",
+    "https://www.instagram.com/ensemble.cse/p/C4ItInvSjyO/",
+    false
+  ),
+  new PostType(
+    201,
     ex,
     "roboexpo.jpg",
     "https://www.instagram.com/p/C4GPNrIyrRH/?igsh=MWVvdzQwMHlnNGd3Zg==",
