@@ -92,6 +92,14 @@ const Workshops = [
     "https://bit.ly/bharat_drive",
     false
   ),
+
+  new PostType(
+    111,
+    wk,
+    "hackthon.jpg",
+    "https://www.instagram.com/p/C4QjBDTS52i/?igsh=MWhrcGJoNDg1ODZrZQ==",
+    false
+  ),
 ];
 
 const Exhibitions = [
