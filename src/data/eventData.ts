@@ -96,6 +96,13 @@ const Workshops = [
 
 const Exhibitions = [
   new PostType(
+    202,
+    ex,
+    "cyber.jpg",
+    "https://www.instagram.com/p/C4GPNrIyrRH/?igsh=MWVvdzQwMHlnNGd3Zg==",
+    false
+  ),
+  new PostType(
     200,
     ex,
     "vrgame.jpg",
