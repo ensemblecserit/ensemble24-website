@@ -13,56 +13,56 @@ const PreEvents = [
     101,
     pe,
     "rebound.jpeg",
-    "https://www.instagram.com/rebound.cse?igsh=MTI0ZHlzbnA2M3hwbg==",
+    "https://www.instagram.com/rebound.cse",
     false
   ),
   new PostType(
     102,
     pe,
     "shootout.jpeg",
-    "https://www.instagram.com/p/C3plI4aS2QY/?igsh=anh4bnlub3dnZXM4",
+    "https://www.instagram.com/p/C3plI4aS2QY/",
     false
   ),
   new PostType(
     103,
     pe,
     "googly.jpeg",
-    "https://www.instagram.com/p/C3aYVbSynfI/?igsh=MW9seGp6aW1jdTV0aQ==",
+    "https://www.instagram.com/p/C3aYVbSynfI/",
     false
   ),
   new PostType(
     104,
     pe,
     "valorant.jpeg",
-    "https://www.instagram.com/p/C3iKQvoyOjX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/C3iKQvoyOjX/",
     false
   ),
   new PostType(
     105,
     pe,
     "trollmaking.jpeg",
-    "https://www.instagram.com/p/C3nOn9zS88o/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/C3nOn9zS88o/",
     false
   ),
   new PostType(
     106,
     pe,
     "gitgithub.jpeg",
-    "https://www.instagram.com/p/C3sYhJNy7fD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/C3sYhJNy7fD/",
     false
   ),
   new PostType(
     107,
     pe,
     "efootball.jpeg",
-    "https://www.instagram.com/p/C3u-5otyiyR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/C3u-5otyiyR/",
     false
   ),
   new PostType(
     108,
     pe,
     "linkedin.jpeg",
-    "https://www.instagram.com/p/C30Gnwly6Nj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "https://www.instagram.com/p/C30Gnwly6Nj/",
     false
   ),
 
@@ -70,7 +70,7 @@ const PreEvents = [
     109,
     pe,
     "survivalFittest.jpeg",
-    "https://www.instagram.com/p/C35XG3_SleG/?igsh=MWd0NHB3YjNuNml4dQ==",
+    "https://www.instagram.com/p/C35XG3_SleG/",
     false
   ),
 
@@ -78,15 +78,53 @@ const PreEvents = [
     110,
     pe,
     "uiux.jpeg",
-    "https://www.instagram.com/p/C35YAzRSom_/?igsh=MTU0YzVqdnE5cTkwcw==",
+    "https://www.instagram.com/p/C35YAzRSom_/",
+    false
+  ),
+
+  new PostType(
+    111,
+    pe,
+    "treasure.jpeg",
+    "https://www.instagram.com/p/C371ZYzy464/",
     false
   ),
 ];
 
+const Exhibitions = [
+  new PostType(
+    200,
+    ex,
+    "cyber.jpg",
+    "https://www.instagram.com/p/C4GPNrIyrRH/",
+    false
+  ),
+  new PostType(
+    201,
+    ex,
+    "vrgame.jpg",
+    "https://www.instagram.com/p/C4ItInvSjyO/",
+    false
+  ),
+  new PostType(
+    202,
+    ex,
+    "roboexpo.jpg",
+    "https://www.instagram.com/p/C4GPNrIyrRH/",
+    false
+  ),
+  new PostType(
+    203,
+    ex,
+    "film.jpeg",
+    "https://www.instagram.com/p/C4XtPV_Sitv/",
+    false
+  ),
+];
 
 const Workshops = [
   new PostType(
-    110,
+    301,
     wk,
     "bharatdrive.jpg",
     "https://bit.ly/bharat_drive",
@@ -94,34 +132,36 @@ const Workshops = [
   ),
 
   new PostType(
-    111,
+    302,
     wk,
-    "hackthon.jpg",
-    "https://www.instagram.com/p/C4QjBDTS52i/?igsh=MWhrcGJoNDg1ODZrZQ==",
+    "designThinking.jpeg",
+    "https://bit.ly/Digital-Design-Thinking-Workshop",
     false
   ),
 ];
 
-const Exhibitions = [
+const Competitions = [
   new PostType(
-    202,
-    ex,
-    "cyber.jpg",
-    "https://www.instagram.com/p/C4GPNrIyrRH/?igsh=MWVvdzQwMHlnNGd3Zg==",
+    401,
+    wk,
+    "hackthon.jpg",
+    "https://tinyurl.com/hackathon-ensemble",
     false
   ),
+
   new PostType(
-    200,
-    ex,
-    "vrgame.jpg",
-    "https://www.instagram.com/ensemble.cse/p/C4ItInvSjyO/",
+    402,
+    cs,
+    "ideathon.jpeg",
+    "https://bit.ly/Ensemble_Ideathon",
     false
   ),
+
   new PostType(
-    201,
-    ex,
-    "roboexpo.jpg",
-    "https://www.instagram.com/p/C4GPNrIyrRH/?igsh=MWVvdzQwMHlnNGd3Zg==",
+    403,
+    cs,
+    "soapy.jpeg",
+    "https://bit.ly/soapy_football-ensemble",
     false
   ),
 ];
@@ -130,9 +170,9 @@ const Exhibitions = [
 // GALLERY ARRAY
 //
 export const AllEvents = [
+  new EventsGroupType(cs, Competitions),
   new EventsGroupType(wk, Workshops),
   new EventsGroupType(ex, Exhibitions),
   new EventsGroupType(pe, PreEvents),
-  // new EventsGroupType(cs, PreEvents),
   // new EventsGroupType(st, PreEvents),
 ];
