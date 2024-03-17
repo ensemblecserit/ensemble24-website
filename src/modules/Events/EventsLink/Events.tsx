@@ -18,7 +18,7 @@ const Events = () => {
           </div>
           <div className="row">
             <Card link="exhibitions" text="Exhibitions" className={styles.c3} />
-            <Card link="stalls" text="Stalls" className={styles.c4} />
+            <Card link="gaming" text="Gaming" className={styles.c4} />
           </div>
         </div>
         <div>

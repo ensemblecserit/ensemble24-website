@@ -34,16 +34,16 @@ const Post = (props: Props) => {
   return (
     <div className={styles.post}>
       <Image src={url} height={350} width={350} alt="Event" draggable={false} />
-      {!props.hideRegister && (
-        <div className={styles.options}>
-          <div className={styles.save} onClick={toggleSave}>
-            {saved !== null && (
-              <>
-                {saved ? <BookmarkCheck /> : <Bookmark />}
-                <span className={styles.text}>SAVE{saved ? "D" : ""}</span>
-              </>
-            )}
-          </div>
+      <div className={styles.options}>
+        <div className={styles.save} onClick={toggleSave}>
+          {saved !== null && (
+            <>
+              {saved ? <BookmarkCheck /> : <Bookmark />}
+              <span className={styles.text}>SAVE{saved ? "D" : ""}</span>
+            </>
+          )}
+        </div>
+        {!props.hideRegister && (
           <Link
             href={props.link}
             className={styles.register}
@@ -53,8 +53,8 @@ const Post = (props: Props) => {
             <PencilLine />
             <span className={styles.text}>REGISTER</span>
           </Link>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

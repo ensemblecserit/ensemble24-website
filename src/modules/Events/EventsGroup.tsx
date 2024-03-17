@@ -2,7 +2,6 @@ import { EventsGroupType } from "@/data/eventTypes";
 import Finished from "./EventsPage/Finished";
 import Post from "./EventsPage/Post";
 import styles from "./events.module.css";
-import { useEffect, useState } from "react";
 
 type Props = {
   end?: boolean;

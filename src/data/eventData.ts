@@ -6,6 +6,7 @@ const wk = "workshops";
 const cs = "competitions";
 const ex = "exhibitions";
 const st = "stalls";
+const gm = "gaming";
 
 // (id: number, folder: string, img: string, link: string, hideRegister: boolean)
 const PreEvents = [
@@ -97,28 +98,28 @@ const Exhibitions = [
     ex,
     "cyber.jpg",
     "https://www.instagram.com/p/C4GPNrIyrRH/",
-    false
-  ),
-  new PostType(
-    201,
-    ex,
-    "vrgame.jpg",
-    "https://www.instagram.com/p/C4ItInvSjyO/",
-    false
+    true
   ),
   new PostType(
     202,
     ex,
     "roboexpo.jpg",
     "https://www.instagram.com/p/C4GPNrIyrRH/",
-    false
+    true
   ),
   new PostType(
     203,
     ex,
     "film.jpeg",
     "https://www.instagram.com/p/C4XtPV_Sitv/",
-    false
+    true
+  ),
+  new PostType(
+    204,
+    ex,
+    "saeExpo.jpeg",
+    "https://www.instagram.com/p/C4lBq5jyEtw/",
+    true
   ),
 ];
 
@@ -137,6 +138,39 @@ const Workshops = [
     "designThinking.jpeg",
     "https://bit.ly/Digital-Design-Thinking-Workshop",
     false
+  ),
+
+  new PostType(303, wk, "ar.jpeg", "https://bit.ly/AR_workshops", false),
+];
+
+const Gaming = [
+  new PostType(
+    201,
+    ex,
+    "vrgame.jpg",
+    "https://www.instagram.com/p/C4ItInvSjyO/",
+    true
+  ),
+  new PostType(
+    400,
+    gm,
+    "ps5.jpeg",
+    "https://www.instagram.com/p/C4ikmYrSW6e/",
+    true
+  ),
+  new PostType(
+    401,
+    gm,
+    "gamingRoom.jpeg",
+    "https://www.instagram.com/p/C4kCRreyrDp/",
+    true
+  ),
+  new PostType(
+    402,
+    gm,
+    "gamingArcade.jpeg",
+    "https://www.instagram.com/p/C4kBz9mSppB/",
+    true
   ),
 ];
 
@@ -171,8 +205,8 @@ const Competitions = [
 //
 export const AllEvents = [
   new EventsGroupType(cs, Competitions),
+  new EventsGroupType(gm, Gaming),
   new EventsGroupType(wk, Workshops),
   new EventsGroupType(ex, Exhibitions),
   new EventsGroupType(pe, PreEvents),
-  // new EventsGroupType(st, PreEvents),
 ];
