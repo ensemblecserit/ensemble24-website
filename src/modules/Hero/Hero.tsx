@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import cn from "@/lib/cn";
 import Link from "next/link";
+import EventsButton from "./components/EventsButton";
 
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -35,9 +36,7 @@ const Hero = () => {
         <h1 className={cn(styles.ense, "text_animate")}>ENSE</h1>
         <h1 className={cn(styles.mble, "text_animate")}>MBLE</h1>
         <span className={cn(styles.year, "text_animate")}>'24 </span>
-        <Link href="/events" className={cn(styles.events, "text_animate")}>
-          View Events
-        </Link>
+        <EventsButton>View Events</EventsButton>
       </div>
       <Image
         className={cn(styles.dept, "dept_animate")}

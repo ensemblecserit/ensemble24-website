@@ -1,7 +1,8 @@
 import Section from "@/components/Section";
-import SavedEvents from "./SavedEvents";
+import SavedEvents from "./EventGroups/SavedEvents";
 import styles from "../events.module.css";
 import Card from "./Card";
+import ShowCases from "./EventGroups/ShowCases";
 
 const Events = () => {
   return (
@@ -22,6 +23,7 @@ const Events = () => {
           </div>
         </div>
         <div>
+          <ShowCases />
           <SavedEvents />
         </div>
       </div>

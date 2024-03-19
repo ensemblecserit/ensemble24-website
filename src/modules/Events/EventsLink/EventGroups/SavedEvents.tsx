@@ -2,7 +2,7 @@
 
 import { getAllPostsFromLocalStorage } from "@/lib/postSave";
 import { useEffect, useState } from "react";
-import EventsGroup from "../EventsGroup";
+import EventsGroup from "../../EventsGroup";
 
 const SavedEvents = () => {
   const [posts, setPosts] = useState({});
@@ -13,7 +13,7 @@ const SavedEvents = () => {
     return (
       <EventsGroup
         events={Object.values(posts)}
-        section="saved-events"
+        section="your-saved-events"
         end={true}
       />
     );

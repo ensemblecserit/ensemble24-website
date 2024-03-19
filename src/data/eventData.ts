@@ -176,7 +176,7 @@ const Gaming = [
 
 const Competitions = [
   new PostType(
-    401,
+    500,
     wk,
     "hackthon.jpg",
     "https://tinyurl.com/hackathon-ensemble",
@@ -184,7 +184,7 @@ const Competitions = [
   ),
 
   new PostType(
-    402,
+    501,
     cs,
     "ideathon.jpeg",
     "https://bit.ly/Ensemble_Ideathon",
@@ -192,12 +192,13 @@ const Competitions = [
   ),
 
   new PostType(
-    403,
+    502,
     cs,
     "soapy.jpeg",
     "https://bit.ly/soapy_football-ensemble",
     false
   ),
+  new PostType(503, cs, "prompt.jpeg", "https://bit.ly/prompt-writing", false),
 ];
 
 //
@@ -209,4 +210,50 @@ export const AllEvents = [
   new EventsGroupType(wk, Workshops),
   new EventsGroupType(ex, Exhibitions),
   new EventsGroupType(pe, PreEvents),
+];
+
+const sh = "showcases";
+export const ShowCasesData = [
+  new PostType(
+    1000,
+    sh,
+    "freefolks.jpeg",
+    "https://www.instagram.com/p/C4qfijWyJWc/",
+    true
+  ),
+  new PostType(
+    502,
+    cs,
+    "soapy.jpeg",
+    "https://bit.ly/soapy_football-ensemble",
+    false
+  ),
+  new PostType(
+    500,
+    wk,
+    "hackthon.jpg",
+    "https://tinyurl.com/hackathon-ensemble",
+    false
+  ),
+  new PostType(
+    400,
+    gm,
+    "ps5.jpeg",
+    "https://www.instagram.com/p/C4ikmYrSW6e/",
+    true
+  ),
+  new PostType(
+    401,
+    gm,
+    "gamingRoom.jpeg",
+    "https://www.instagram.com/p/C4kCRreyrDp/",
+    true
+  ),
+  new PostType(
+    301,
+    wk,
+    "bharatdrive.jpg",
+    "https://bit.ly/bharat_drive",
+    false
+  ),
 ];
