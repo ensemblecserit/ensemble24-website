@@ -6,6 +6,7 @@ import { Share2 } from "lucide-react";
 import { kv } from "@vercel/kv";
 import { unstable_noStore as noStore } from "next/cache";
 import { Suspense } from "react";
+import { musicCredit } from "@/data/songData";
 
 const VisitorCount = async () => {
   // Disable data caching for visitor count
@@ -59,10 +60,7 @@ const Footer = () => {
           <div>Copyright © 2024</div>
           <div>ENSEMBLE'24 CSE RIT</div>
           <div>All rights reserved</div>
-          <Link
-            href="https://www.youtube.com/watch?v=OGwyhjk_fhE&list=OLAK5uy_mulgeKNv0iTsW0ovIFzga1L36Ya3tBH9E&index=1"
-            className={styles.credits}
-          >
+          <Link href={musicCredit} className={styles.credits} target="_blank">
             Music credits
           </Link>
         </div>

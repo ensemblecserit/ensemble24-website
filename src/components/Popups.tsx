@@ -4,11 +4,12 @@ import cn from "@/lib/cn";
 import { Lightbulb, Music, PauseOctagon, StepForward } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { path } from "../data/songData";
 
 const Popups = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [first, setFirst] = useState(true);
-  const songs = ["audio/nebulakal.mp3"];
+  const songs = [path];
 
   // dealing with popup
   useEffect(() => {
