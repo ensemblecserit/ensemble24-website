@@ -5,7 +5,7 @@ const pe = "pre-events";
 const wk = "workshops";
 const cs = "competitions";
 const ex = "exhibitions";
-const st = "stalls";
+const st = "stalls-nd-booths";
 const gm = "gaming";
 
 // (id: number, folder: string, img: string, link: string, hideRegister: boolean)
@@ -123,6 +123,16 @@ const Exhibitions = [
   ),
 ];
 
+const Stalls = [
+  new PostType(
+    601,
+    st,
+    "midjourney.jpeg",
+    "https://www.instagram.com/p/C4vjiUWSCdF/",
+    true
+  ),
+];
+
 const Workshops = [
   new PostType(
     301,
@@ -199,6 +209,13 @@ const Competitions = [
     false
   ),
   new PostType(503, cs, "prompt.jpeg", "https://bit.ly/prompt-writing", false),
+  new PostType(
+    504,
+    cs,
+    "penfight.jpeg",
+    "https://bit.ly/Ensemble_pen_fight",
+    false
+  ),
 ];
 
 //
@@ -208,6 +225,7 @@ export const AllEvents = [
   new EventsGroupType(cs, Competitions),
   new EventsGroupType(gm, Gaming),
   new EventsGroupType(wk, Workshops),
+  new EventsGroupType(st, Stalls),
   new EventsGroupType(ex, Exhibitions),
   new EventsGroupType(pe, PreEvents),
 ];
