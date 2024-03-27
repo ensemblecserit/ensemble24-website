@@ -44,7 +44,6 @@ const PrevFest = [
   new Photo("8.webp", "LEGACY008", true),
   new Photo("9.webp", "LEGACY009", true),
 ];
-
 const Rebound = [
   new Photo("1.webp", "REBD001", false),
   new Photo("10.webp", "REBD002", false),
@@ -81,6 +80,28 @@ const Rebound = [
   new Photo("8.webp", "REBD033", false),
   new Photo("9.webp", "REBD034", false),
 ];
+const Googly = [
+  new Photo("1.webp", "GOG001", false),
+  new Photo("2.webp", "GOG002", false),
+  new Photo("3.webp", "GOG003", false),
+  new Photo("4.webp", "GOG004", false),
+  new Photo("5.webp", "GOG005", false),
+  new Photo("6.webp", "GOG006", false),
+  new Photo("7.webp", "GOG007", false),
+  new Photo("9.webp", "GOG009", false),
+  new Photo("10.webp", "GOG010", false),
+  new Photo("11.webp", "GOG011", false),
+  new Photo("12.webp", "GOG012", false),
+  new Photo("13.webp", "GOG013", false),
+  new Photo("14.webp", "GOG014", false),
+  new Photo("15.webp", "GOG015", false),
+  new Photo("16.webp", "GOG016", false),
+  new Photo("17.webp", "GOG017", false),
+  new Photo("18.webp", "GOG018", false),
+  new Photo("19.webp", "GOG019", false),
+  new Photo("20.webp", "GOG020", false),
+  new Photo("21.webp", "GOG021", false),
+];
 
 // folder names
 const ll = "logo-launch";
@@ -93,6 +114,7 @@ const pf = "previous-fest";
 // GALLERY ARRAY
 //
 export const Galleries = [
+  new Gallery(g, "Googly", Googly),
   new Gallery(r, "Rebound Competition", Rebound),
   new Gallery(ll, "Logo Launch", LogoLaunch),
   new Gallery(pe, "Pre-Events", PreEvents),
