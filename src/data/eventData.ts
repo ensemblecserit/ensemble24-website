@@ -251,4 +251,5 @@ export const ShowCasesData = [
     true
   ),
   new PostType(1002, sh, "openmic.jpeg", def, true),
+  new PostType(1003, sh, "culturals.jpg", def, true),
 ];
