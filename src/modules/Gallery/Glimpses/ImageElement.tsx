@@ -20,7 +20,7 @@ const ImageElement = (props: Props) => {
       <div className={styles.item_img}>
         {props.isLandscape ? (
           <Image
-            alt={props.caption}
+            alt="Ensemble CSE RIT Kottayam 24 Event"
             src={link}
             height={472}
             width={800}
@@ -28,7 +28,7 @@ const ImageElement = (props: Props) => {
           />
         ) : (
           <Image
-            alt={props.caption}
+            alt="Ensemble CSE RIT Kottayam 24 Event"
             src={link}
             height={500}
             width={375}
