@@ -10,11 +10,9 @@ export class Gallery {
 }
 export class Photo {
   public name: string;
-  public caption: string;
   public isLandscape: boolean;
-  constructor(name: string, caption: string, isLandscape: boolean) {
+  constructor(name: string, isLandscape: boolean) {
     this.name = name;
-    this.caption = caption;
     this.isLandscape = isLandscape;
   }
 }

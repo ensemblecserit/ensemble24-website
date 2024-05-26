@@ -35,9 +35,6 @@ const ImageElement = (props: Props) => {
             draggable={false}
           />
         )}
-        <p className={styles.item_name} data-img>
-          {props.caption}.JPG
-        </p>
       </div>
     </div>
   );
