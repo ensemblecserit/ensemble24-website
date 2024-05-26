@@ -200,12 +200,12 @@ const pf = "previous-fest";
 // GALLERY ARRAY
 //
 export const Galleries = [
-  new Gallery(g, "Googly", Googly),
-  new Gallery(r, "Rebound Competition", Rebound),
+  new Gallery("day1", "Day 01", Day1),
+  new Gallery("day2", "Day 02", Day2),
+  new Gallery("culturals", "Day 02 - Culturals", Culturals),
+  new Gallery(g, "Pre-events - Googly", Googly),
+  new Gallery(r, "Pre-events - Rebound", Rebound),
   new Gallery(ll, "Logo Launch", LogoLaunch),
   new Gallery(pe, "Pre-Events", PreEvents),
   new Gallery(pf, "Previous Fest Gallery", PrevFest),
-  new Gallery("day1", "Day 01", Day1),
-  new Gallery("day2", "Day 02", Day2),
-  new Gallery("culturals", "Culturals", Culturals),
 ];
