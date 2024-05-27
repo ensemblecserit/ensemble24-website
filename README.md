@@ -5,13 +5,13 @@ This is a [Next.js](https://nextjs.org/) project.
 First, install the dependencies and then run the development server. This project utilizes `pnpm` for dependency management.
 
 ```bash
-pnpm install
+npm install
 ```
 
 ```bash
-pnpm dev
-# or
 npm run dev
+# or
+pnpm dev
 # or
 yarn dev
 # or
@@ -22,4 +22,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployed Link
 
-You can check out [the deployed link here.](https://ensemble-website.vercel.app/) Your feedback and contributions are welcome!
+You can check out [the deployed link here.](https://ensemblecse24.vercel.app/) Your feedback and contributions are welcome!
